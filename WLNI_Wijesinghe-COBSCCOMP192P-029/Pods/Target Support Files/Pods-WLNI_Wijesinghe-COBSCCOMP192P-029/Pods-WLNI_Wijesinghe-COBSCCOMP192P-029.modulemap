@@ -1,0 +1,6 @@
+framework module Pods_WLNI_Wijesinghe_COBSCCOMP192P_029 {
+  umbrella header "Pods-WLNI_Wijesinghe-COBSCCOMP192P-029-umbrella.h"
+
+  export *
+  module * { export * }
+}
