@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		FAC3D1F72633F492000F8FC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC3D1F52633F492000F8FC1 /* LaunchScreen.storyboard */; };
 		FAC3D2022633FE63000F8FC1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D2012633FE63000F8FC1 /* Category.swift */; };
 		FAC3D2062633FF5F000F8FC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC3D2052633FF5F000F8FC1 /* GoogleService-Info.plist */; };
+		FAC3D21726341EFF000F8FC1 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D21626341EFF000F8FC1 /* CategoryViewController.swift */; };
+		FAC3D21D26342191000F8FC1 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D21B26342191000F8FC1 /* CategoryTableViewCell.swift */; };
+		FAC3D21E26342191000F8FC1 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC3D21C26342191000F8FC1 /* CategoryTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		FAC3D1F82633F492000F8FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC3D2012633FE63000F8FC1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		FAC3D2052633FF5F000F8FC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FAC3D21626341EFF000F8FC1 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		FAC3D21B26342191000F8FC1 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		FAC3D21C26342191000F8FC1 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +60,6 @@
 				7451AE8C3404ECF41563A0A7 /* Pods-WLNI_Wijesinghe-COBSCCOMP192P-029.debug.xcconfig */,
 				8A12934B49DAE249EA823053 /* Pods-WLNI_Wijesinghe-COBSCCOMP192P-029.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,6 +92,8 @@
 		FAC3D1E62633F48F000F8FC1 /* WLNI_Wijesinghe-COBSCCOMP192P-029 */ = {
 			isa = PBXGroup;
 			children = (
+				FAC3D21A26342170000F8FC1 /* UiRow */,
+				FAC3D21526341EC8000F8FC1 /* Controllers */,
 				FAC3D2002633FE41000F8FC1 /* Model */,
 				FAC3D1E72633F48F000F8FC1 /* AppDelegate.swift */,
 				FAC3D1E92633F48F000F8FC1 /* SceneDelegate.swift */,
@@ -107,6 +114,23 @@
 				FAC3D2012633FE63000F8FC1 /* Category.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FAC3D21526341EC8000F8FC1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAC3D21626341EFF000F8FC1 /* CategoryViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FAC3D21A26342170000F8FC1 /* UiRow */ = {
+			isa = PBXGroup;
+			children = (
+				FAC3D21B26342191000F8FC1 /* CategoryTableViewCell.swift */,
+				FAC3D21C26342191000F8FC1 /* CategoryTableViewCell.xib */,
+			);
+			path = UiRow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC3D1F72633F492000F8FC1 /* LaunchScreen.storyboard in Resources */,
+				FAC3D21E26342191000F8FC1 /* CategoryTableViewCell.xib in Resources */,
 				FAC3D1F42633F492000F8FC1 /* Assets.xcassets in Resources */,
 				FAC3D1EF2633F48F000F8FC1 /* Main.storyboard in Resources */,
 				FAC3D2062633FF5F000F8FC1 /* GoogleService-Info.plist in Resources */,
@@ -228,6 +253,8 @@
 				FAC3D2022633FE63000F8FC1 /* Category.swift in Sources */,
 				FAC3D1E82633F48F000F8FC1 /* AppDelegate.swift in Sources */,
 				FAC3D1F22633F48F000F8FC1 /* WLNI_Wijesinghe_COBSCCOMP192P_029.xcdatamodeld in Sources */,
+				FAC3D21D26342191000F8FC1 /* CategoryTableViewCell.swift in Sources */,
+				FAC3D21726341EFF000F8FC1 /* CategoryViewController.swift in Sources */,
 				FAC3D1EA2633F48F000F8FC1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
