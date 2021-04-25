@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7C27CEFC941487A777C47CA5 /* Pods_WLNI_Wijesinghe_COBSCCOMP192P_029.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8146A24ACFE581C9B3DA8936 /* Pods_WLNI_Wijesinghe_COBSCCOMP192P_029.framework */; };
+		FA22BDAF2635D1680046939E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22BDAE2635D1680046939E /* Product.swift */; };
+		FA22BDB22635D25F0046939E /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22BDB12635D25F0046939E /* ProductViewController.swift */; };
 		FAC3D1E82633F48F000F8FC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D1E72633F48F000F8FC1 /* AppDelegate.swift */; };
 		FAC3D1EA2633F48F000F8FC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D1E92633F48F000F8FC1 /* SceneDelegate.swift */; };
 		FAC3D1EC2633F48F000F8FC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D1EB2633F48F000F8FC1 /* ViewController.swift */; };
@@ -26,6 +28,8 @@
 		7451AE8C3404ECF41563A0A7 /* Pods-WLNI_Wijesinghe-COBSCCOMP192P-029.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLNI_Wijesinghe-COBSCCOMP192P-029.debug.xcconfig"; path = "Target Support Files/Pods-WLNI_Wijesinghe-COBSCCOMP192P-029/Pods-WLNI_Wijesinghe-COBSCCOMP192P-029.debug.xcconfig"; sourceTree = "<group>"; };
 		8146A24ACFE581C9B3DA8936 /* Pods_WLNI_Wijesinghe_COBSCCOMP192P_029.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WLNI_Wijesinghe_COBSCCOMP192P_029.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A12934B49DAE249EA823053 /* Pods-WLNI_Wijesinghe-COBSCCOMP192P-029.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLNI_Wijesinghe-COBSCCOMP192P-029.release.xcconfig"; path = "Target Support Files/Pods-WLNI_Wijesinghe-COBSCCOMP192P-029/Pods-WLNI_Wijesinghe-COBSCCOMP192P-029.release.xcconfig"; sourceTree = "<group>"; };
+		FA22BDAE2635D1680046939E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		FA22BDB12635D25F0046939E /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		FAC3D1E42633F48F000F8FC1 /* WLNI_Wijesinghe-COBSCCOMP192P-029.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WLNI_Wijesinghe-COBSCCOMP192P-029.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC3D1E72633F48F000F8FC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC3D1E92633F48F000F8FC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC3D2012633FE63000F8FC1 /* Category.swift */,
+				FA22BDAE2635D1680046939E /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC3D21626341EFF000F8FC1 /* CategoryViewController.swift */,
+				FA22BDB12635D25F0046939E /* ProductViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,10 +256,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC3D1EC2633F48F000F8FC1 /* ViewController.swift in Sources */,
+				FA22BDAF2635D1680046939E /* Product.swift in Sources */,
 				FAC3D2022633FE63000F8FC1 /* Category.swift in Sources */,
 				FAC3D1E82633F48F000F8FC1 /* AppDelegate.swift in Sources */,
 				FAC3D1F22633F48F000F8FC1 /* WLNI_Wijesinghe_COBSCCOMP192P_029.xcdatamodeld in Sources */,
 				FAC3D21D26342191000F8FC1 /* CategoryTableViewCell.swift in Sources */,
+				FA22BDB22635D25F0046939E /* ProductViewController.swift in Sources */,
 				FAC3D21726341EFF000F8FC1 /* CategoryViewController.swift in Sources */,
 				FAC3D1EA2633F48F000F8FC1 /* SceneDelegate.swift in Sources */,
 			);

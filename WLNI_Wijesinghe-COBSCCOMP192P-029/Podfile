@@ -8,5 +8,7 @@ target 'WLNI_Wijesinghe-COBSCCOMP192P-029' do
   # Pods for WLNI_Wijesinghe-COBSCCOMP192P-029
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'DropDown'
 
 end
