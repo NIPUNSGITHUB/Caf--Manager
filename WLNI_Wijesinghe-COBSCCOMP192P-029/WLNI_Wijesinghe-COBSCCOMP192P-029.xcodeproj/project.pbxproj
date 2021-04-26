@@ -22,6 +22,9 @@
 		FAC3D21726341EFF000F8FC1 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D21626341EFF000F8FC1 /* CategoryViewController.swift */; };
 		FAC3D21D26342191000F8FC1 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D21B26342191000F8FC1 /* CategoryTableViewCell.swift */; };
 		FAC3D21E26342191000F8FC1 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC3D21C26342191000F8FC1 /* CategoryTableViewCell.xib */; };
+		FAE8D64726374123004E2FAA /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8D64526374123004E2FAA /* ProductTableViewCell.swift */; };
+		FAE8D64826374123004E2FAA /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE8D64626374123004E2FAA /* ProductTableViewCell.xib */; };
+		FAE8D65026374789004E2FAA /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8D64F26374789004E2FAA /* ItemListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		FAC3D21626341EFF000F8FC1 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		FAC3D21B26342191000F8FC1 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		FAC3D21C26342191000F8FC1 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		FAE8D64526374123004E2FAA /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		FAE8D64626374123004E2FAA /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		FAE8D64F26374789004E2FAA /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 			children = (
 				FAC3D21626341EFF000F8FC1 /* CategoryViewController.swift */,
 				FA22BDB12635D25F0046939E /* ProductViewController.swift */,
+				FAE8D64F26374789004E2FAA /* ItemListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -135,6 +142,8 @@
 			children = (
 				FAC3D21B26342191000F8FC1 /* CategoryTableViewCell.swift */,
 				FAC3D21C26342191000F8FC1 /* CategoryTableViewCell.xib */,
+				FAE8D64526374123004E2FAA /* ProductTableViewCell.swift */,
+				FAE8D64626374123004E2FAA /* ProductTableViewCell.xib */,
 			);
 			path = UiRow;
 			sourceTree = "<group>";
@@ -199,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC3D1F72633F492000F8FC1 /* LaunchScreen.storyboard in Resources */,
+				FAE8D64826374123004E2FAA /* ProductTableViewCell.xib in Resources */,
 				FAC3D21E26342191000F8FC1 /* CategoryTableViewCell.xib in Resources */,
 				FAC3D1F42633F492000F8FC1 /* Assets.xcassets in Resources */,
 				FAC3D1EF2633F48F000F8FC1 /* Main.storyboard in Resources */,
@@ -259,6 +269,8 @@
 				FA22BDAF2635D1680046939E /* Product.swift in Sources */,
 				FAC3D2022633FE63000F8FC1 /* Category.swift in Sources */,
 				FAC3D1E82633F48F000F8FC1 /* AppDelegate.swift in Sources */,
+				FAE8D65026374789004E2FAA /* ItemListViewController.swift in Sources */,
+				FAE8D64726374123004E2FAA /* ProductTableViewCell.swift in Sources */,
 				FAC3D1F22633F48F000F8FC1 /* WLNI_Wijesinghe_COBSCCOMP192P_029.xcdatamodeld in Sources */,
 				FAC3D21D26342191000F8FC1 /* CategoryTableViewCell.swift in Sources */,
 				FA22BDB22635D25F0046939E /* ProductViewController.swift in Sources */,

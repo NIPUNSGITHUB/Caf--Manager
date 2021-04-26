@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="1881" y="846"/>
         </scene>
-        <!--View Controller-->
+        <!--Item List View Controller-->
         <scene sceneID="60T-A6-sHS">
             <objects>
-                <viewController id="n05-0o-tK0" sceneMemberID="viewController">
+                <viewController id="n05-0o-tK0" customClass="ItemListViewController" customModule="WLNI_Wijesinghe_COBSCCOMP192P_029" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sIq-qq-ne9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,7 +147,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="GnS-c9-bVb" kind="show" id="AsV-sO-wMr"/>
+                                            <action selector="btnProductLoad:" destination="n05-0o-tK0" eventType="touchUpInside" id="TXE-gh-JA1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EI3-Ze-rpJ">
@@ -175,20 +175,31 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g91-LW-y34">
+                                <rect key="frame" x="10" y="94" width="355" height="514"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dYD-wp-80B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dYD-wp-80B" firstAttribute="bottom" secondItem="g91-LW-y34" secondAttribute="bottom" constant="10" id="0f5-Rg-lSa"/>
+                            <constraint firstItem="g91-LW-y34" firstAttribute="top" secondItem="KJi-si-MkN" secondAttribute="bottom" constant="10" id="4VA-P6-JPj"/>
                             <constraint firstItem="KJi-si-MkN" firstAttribute="top" secondItem="dYD-wp-80B" secondAttribute="top" constant="10" id="GI1-eb-SrA"/>
                             <constraint firstItem="dYD-wp-80B" firstAttribute="trailing" secondItem="KJi-si-MkN" secondAttribute="trailing" constant="10" id="YsQ-kh-WkQ"/>
+                            <constraint firstItem="dYD-wp-80B" firstAttribute="trailing" secondItem="g91-LW-y34" secondAttribute="trailing" constant="10" id="Zt4-Jg-V36"/>
                             <constraint firstItem="KJi-si-MkN" firstAttribute="leading" secondItem="dYD-wp-80B" secondAttribute="leading" constant="10" id="mOb-mV-udc"/>
+                            <constraint firstItem="g91-LW-y34" firstAttribute="leading" secondItem="dYD-wp-80B" secondAttribute="leading" constant="10" id="tXA-wk-0mL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="z4F-7s-BQJ"/>
+                    <connections>
+                        <outlet property="tblProductList" destination="g91-LW-y34" id="NLT-o6-uCN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jjg-k9-Sae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="1554"/>
+            <point key="canvasLocation" x="333.60000000000002" y="1553.9730134932536"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="FMz-a6-sFj">
@@ -199,7 +210,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" estimatedRowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Egk-2h-UKx">
-                                <rect key="frame" x="10" y="54" width="355" height="554"/>
+                                <rect key="frame" x="10" y="10" width="355" height="647"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodListItem" rowHeight="87" id="Acu-d7-8Af" customClass="FoodListTableViewCell" customModule="WLNI_Wijesinghe_COBSCCOMP192P_029" customModuleProvider="target">

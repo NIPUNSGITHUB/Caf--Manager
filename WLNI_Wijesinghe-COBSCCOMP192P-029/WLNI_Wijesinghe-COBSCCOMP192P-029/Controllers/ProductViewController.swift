@@ -27,17 +27,42 @@ class ProductViewController: UIViewController,UITableViewDelegate,UIImagePickerC
     private let db = Database.database().reference();
     var product:[Product] = [
     ]
+    var ct:[Category] = [
+    ]
+    var categoryArr = [String]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         
+        getCategory()
         // Do any additional setup after loading the view.
+    }
+    
+    func getCategory(){
+        let group = DispatchGroup()
+                self.db.child("Category").getData { (error, snapshot) in
+                     if snapshot.exists() {
+                        
+                        let dataChange = snapshot.value as! [String:AnyObject]
+                        
+                        group.wait()
+                       
+                        dataChange.forEach({ (key,val) in
+                           
+                            self.categoryArr.append(val as! String)
+                        })
+                        
+                        group.notify(queue: .main) {
+                            
+                        }
+                       // print("Got data",snapshot.value!)
+                    }
+                }
     }
 
     @IBAction func categoryDropDown(_ sender: Any) {
       
-        
-        dropDown.dataSource =  [ "Tomato soup", "Mini burgers", "Onion rings", "Baked potato", "Salad"]//4
+        dropDown.dataSource = categoryArr
+       // dropDown.dataSource =  [ "Tomato soup", "Mini burgers", "Onion rings", "Baked potato", "Salad"]//4
         dropDown.anchorView = sender as! AnchorView //5
         dropDown.bottomOffset = CGPoint(x: 0, y: (sender as AnyObject).frame.size.height) //6
            dropDown.show() //7
@@ -129,52 +154,57 @@ class ProductViewController: UIViewController,UITableViewDelegate,UIImagePickerC
 //            discount: txtDiscount.text
 //        )
 //        product.append(pro)
-       
+        
+        
         if txtName.text == "" {
-            Toast(Title: "Title", Text: "Product name is manditary", delay: 1)
+            Toast(Title: "Information", Text: "Product name is manditary", delay: 1)
            
         }
         else if txtDescription.text == ""
         {
-            Toast(Title: "Title", Text: "Product description is manditary", delay: 1)
+            Toast(Title: "Information", Text: "Product description is manditary", delay: 1)
         }
         else if txtPrice.text == ""
         {
-            Toast(Title: "Title", Text: "Product price is manditary", delay: 1)
+            Toast(Title: "Information", Text: "Product price is manditary", delay: 1)
         }
         else if self.selectedimage?.pngData() == nil
         {
-            Toast(Title: "Title", Text: "Product image is manditary", delay: 1)
+            Toast(Title: "Information", Text: "Product image is manditary", delay: 1)
+        }
+        else if dropDown.selectedItem == nil
+        {
+            Toast(Title: "Information", Text: "Product category is manditary", delay: 1)
         }
         else
         {
             let group = DispatchGroup()
-                  let child = UUID().uuidString
-                  self.db.child("Product").child(child).child("name").setValue(txtName.text);
-                  self.db.child("Product").child(child).child("description").setValue(txtDescription.text);
-                  self.db.child("Product").child(child).child("price").setValue(txtPrice.text);
-                  self.db.child("Product").child(child).child("discount").setValue(txtDiscount.text!);
-                  self.db.child("Product").child(child).child("image").setValue("/\(child).jpg");
-                if switchSellAsItem.isOn {
-                    self.db.child("Product").child(child).child("sellAsItem").setValue(1);
-                }
-                else
-                {
-                    self.db.child("Product").child(child).child("sellAsItem").setValue(0);
-                }
-            
+                let child = UUID().uuidString
+                self.db.child("Product").child(child).child("name").setValue(txtName.text);
+                self.db.child("Product").child(child).child("description").setValue(txtDescription.text);
+                self.db.child("Product").child(child).child("price").setValue(txtPrice.text);
+                self.db.child("Product").child(child).child("discount").setValue(txtDiscount.text != "" ? txtDiscount.text : 0);
+                self.db.child("Product").child(child).child("image").setValue("/\(child).jpg");
+                self.db.child("Product").child(child).child("category").setValue(dropDown.selectedItem!);
+                self.db.child("Product").child(child).child("sellAsItem").setValue(switchSellAsItem.isOn ? 1 : 0);
                 uploadImage(imageId:child)
                 group.wait()
             
                 group.notify(queue: .main) {
                     self.Toast(Title: "Success", Text: "Successfuly Created!", delay: 1)
+                    self.resetFeilds()
                 }
                 
         }
-        
-        
-      
-        
+    }
+    
+    func resetFeilds() {
+        txtName.text = "";
+        txtDescription.text = "";
+        txtPrice.text = "";
+        txtDiscount.text = "";
+        selectedimage = nil;
+        imgProduct.image = selectedimage;
     }
     
     func uploadImage(imageId:String) {

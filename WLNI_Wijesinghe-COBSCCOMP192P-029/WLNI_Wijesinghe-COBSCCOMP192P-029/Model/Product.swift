@@ -12,13 +12,17 @@ struct Product {
     var description:String!
     var price:String!
     var discount:String!
-    var asSell:String!
+    var image:String!
+    var category:String!
+    var asSell:Int!
     func getJSON() -> NSMutableDictionary {
            let dict = NSMutableDictionary()
             dict.setValue(id, forKey: "id")
             dict.setValue(name, forKey: "name")
             dict.setValue(description, forKey: "description")
             dict.setValue(price, forKey: "price")
+            dict.setValue(image, forKey: "image")
+            dict.setValue(category, forKey: "category")
             dict.setValue(discount, forKey: "discount")
             dict.setValue(asSell, forKey: "asSell")
            return dict
