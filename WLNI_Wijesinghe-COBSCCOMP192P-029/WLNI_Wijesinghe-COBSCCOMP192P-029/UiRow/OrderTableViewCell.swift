@@ -51,13 +51,27 @@ class OrderTableViewCell: UITableViewCell {
     }
     
     @IBAction func btnReject(_ sender: Any) {
+        let group = DispatchGroup()
         self.db.child("Orders").child(order.id).child("status").setValue(0);
-        orderViewController?.lodaData();
+        group.wait()
+    
+        group.notify(queue: .main) {
+            self.orderViewController?.lodaData();
+           
+        }
+        
     }
     
     @IBAction func btnAccept(_ sender: Any) {
+        
+        let group = DispatchGroup()
         self.db.child("Orders").child(order.id).child("status").setValue(1);
-        orderViewController?.lodaData();
+        group.wait()
+    
+        group.notify(queue: .main) {
+            self.orderViewController?.lodaData();
+        }
+        
     }
     
     @IBAction func btnInfo(_ sender: Any) {

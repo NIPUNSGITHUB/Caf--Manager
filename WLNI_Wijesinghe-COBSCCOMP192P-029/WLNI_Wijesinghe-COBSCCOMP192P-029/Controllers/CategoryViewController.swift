@@ -30,10 +30,21 @@ class CategoryViewController: UIViewController ,UITableViewDelegate,UITableViewD
     }
     
     @IBAction func btnAdd(_ sender: Any) {
+        if txt_nmw.text == "" {
+            Toast(Title: "Information", Text: "Category is manditary", delay: 1)
+        }
+        let group = DispatchGroup()
         let cat = Category(name: txt_nmw.text)
         ct.append(cat)
         let child = UUID().uuidString
         self.db.child("Category").child(child).setValue(txt_nmw.text)
+        group.wait()
+    
+        group.notify(queue: .main) {
+            self.txt_nmw.text = "";
+            self.lodaData()
+           
+        }
     }
     
     
@@ -46,7 +57,7 @@ class CategoryViewController: UIViewController ,UITableViewDelegate,UITableViewD
         }
     
    @objc func lodaData(){
-        
+    self.ct.removeAll();
         let group = DispatchGroup()
                 self.db.child("Category").getData { (error, snapshot) in
                      if snapshot.exists() {
@@ -54,9 +65,10 @@ class CategoryViewController: UIViewController ,UITableViewDelegate,UITableViewD
                         let dataChange = snapshot.value as! [String:AnyObject]
                       
                         
-                      
-                        group.wait()
                        
+
+                        group.wait()
+                        
                         dataChange.forEach({ (key,val) in
                           
                             let cart = Category(name: val as! String,id: key as! String)
@@ -72,6 +84,7 @@ class CategoryViewController: UIViewController ,UITableViewDelegate,UITableViewD
                                 // do something here when loop finished
                             self.ct.sorted() { $0.name > $1.name }
                             self.tbl_category.reloadData()
+                            
                         }
                        // print("Got data",snapshot.value!)
                     }
@@ -100,6 +113,15 @@ class CategoryViewController: UIViewController ,UITableViewDelegate,UITableViewD
                }
             
             
+        }
+    
+    func Toast(Title:String ,Text:String, delay:Int) -> Void {
+            let alert = UIAlertController(title: Title, message: Text, preferredStyle: .alert)
+            self.present(alert, animated: true)
+            let deadlineTime = DispatchTime.now() + .seconds(delay)
+            DispatchQueue.main.asyncAfter(deadline: deadlineTime, execute: {
+                alert.dismiss(animated: true, completion: nil)
+            })
         }
     
      

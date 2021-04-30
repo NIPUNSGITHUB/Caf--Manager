@@ -33,7 +33,7 @@ class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     
     @objc func lodaData(){
-
+         self.orderArr.removeAll()
          let group = DispatchGroup()
                  self.db.child("Orders").getData { (error, snapshot) in
                       if snapshot.exists() {
@@ -41,7 +41,7 @@ class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                         let dataChange = snapshot.value as! [String:AnyObject]
 
                         group.wait()
-                        self.orderArr.removeAll()
+                       
                          dataChange.forEach({ (key,val) in
 
                             let objOrder = Order(
