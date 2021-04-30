@@ -43,11 +43,11 @@
             </objects>
             <point key="canvasLocation" x="1135" y="53"/>
         </scene>
-        <!--Item-->
+        <!--Store-->
         <scene sceneID="Bsv-Rb-dcr">
             <objects>
                 <navigationController id="QSU-q3-qTD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nal-Xd-oUQ"/>
+                    <tabBarItem key="tabBarItem" title="Store" id="nal-Xd-oUQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cml-5c-a2H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -74,13 +74,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIR-G3-K21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2286" y="2486"/>
+            <point key="canvasLocation" x="2140" y="2342"/>
         </scene>
-        <!--Item-->
+        <!--Order-->
         <scene sceneID="dFR-C1-viX">
             <objects>
                 <navigationController id="KVY-B5-24M" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6tN-ZP-xdB"/>
+                    <tabBarItem key="tabBarItem" title="Order" id="6tN-ZP-xdB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Kx-md-HhN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -93,27 +93,54 @@
             </objects>
             <point key="canvasLocation" x="1135" y="846"/>
         </scene>
-        <!--View Controller-->
+        <!--Order View Controller-->
         <scene sceneID="XRU-pm-Mwv">
             <objects>
-                <viewController id="XJh-MD-tj1" sceneMemberID="viewController">
+                <viewController id="XJh-MD-tj1" customClass="OrderViewController" customModule="WLNI_Wijesinghe_COBSCCOMP192P_029" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Tk-Cg-LNe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6dP-g7-Guz">
+                                <rect key="frame" x="0.0" y="44" width="375" height="544"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSL-di-8ae">
+                                <rect key="frame" x="10" y="588" width="355" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Reset Orders For Test"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="XJh-MD-tj1" eventType="touchUpInside" id="upm-Kk-RU1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LJE-i2-soG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LSL-di-8ae" firstAttribute="leading" secondItem="LJE-i2-soG" secondAttribute="leading" constant="10" id="2WJ-8i-qCN"/>
+                            <constraint firstItem="LJE-i2-soG" firstAttribute="trailing" secondItem="LSL-di-8ae" secondAttribute="trailing" constant="10" id="Y21-CK-jIk"/>
+                            <constraint firstItem="LSL-di-8ae" firstAttribute="top" secondItem="6dP-g7-Guz" secondAttribute="bottom" id="eli-EN-L0t"/>
+                            <constraint firstItem="6dP-g7-Guz" firstAttribute="top" secondItem="LJE-i2-soG" secondAttribute="top" id="ktV-f4-9DW"/>
+                            <constraint firstItem="6dP-g7-Guz" firstAttribute="leading" secondItem="LJE-i2-soG" secondAttribute="leading" id="neI-Ev-chK"/>
+                            <constraint firstItem="LJE-i2-soG" firstAttribute="bottom" secondItem="LSL-di-8ae" secondAttribute="bottom" id="nyO-VG-0jD"/>
+                            <constraint firstItem="LJE-i2-soG" firstAttribute="trailing" secondItem="6dP-g7-Guz" secondAttribute="trailing" id="tCH-x9-C4V"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Rk6-3r-Bhm"/>
+                    <connections>
+                        <outlet property="btnResetOrders" destination="LSL-di-8ae" id="yE5-pr-zuC"/>
+                        <outlet property="tblOrderList" destination="6dP-g7-Guz" id="KYH-wQ-gVI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnw-si-n0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1135" y="1554"/>
         </scene>
-        <!--Item-->
+        <!--Account-->
         <scene sceneID="uhE-uS-BbW">
             <objects>
                 <navigationController id="0f7-y4-o2W" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="tHr-cJ-O1C"/>
+                    <tabBarItem key="tabBarItem" title="Account" id="tHr-cJ-O1C"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3pd-jS-D9Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -323,17 +350,39 @@
             </objects>
             <point key="canvasLocation" x="-324" y="2341.9790104947529"/>
         </scene>
-        <!--View Controller-->
+        <!--Print Data View Controller-->
         <scene sceneID="YlA-KI-IDP">
             <objects>
-                <viewController id="pHX-eU-ISS" sceneMemberID="viewController">
+                <viewController id="pHX-eU-ISS" customClass="PrintDataViewController" customModule="WLNI_Wijesinghe_COBSCCOMP192P_029" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T8k-EK-MWU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5p-4j-b4O">
+                                <rect key="frame" x="10" y="52" width="355" height="30"/>
+                                <state key="normal" title="Print History"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zr2-Ce-NS3">
+                                <rect key="frame" x="10" y="92" width="355" height="516"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Edo-c6-NdI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zr2-Ce-NS3" firstAttribute="top" secondItem="X5p-4j-b4O" secondAttribute="bottom" constant="10" id="0Yo-dC-5Xo"/>
+                            <constraint firstItem="X5p-4j-b4O" firstAttribute="top" secondItem="Edo-c6-NdI" secondAttribute="top" constant="8" id="4Ey-14-5q8"/>
+                            <constraint firstItem="Zr2-Ce-NS3" firstAttribute="leading" secondItem="Edo-c6-NdI" secondAttribute="leading" constant="10" id="Duc-1B-Cck"/>
+                            <constraint firstItem="Edo-c6-NdI" firstAttribute="trailing" secondItem="X5p-4j-b4O" secondAttribute="trailing" constant="10" id="V9O-FQ-LRe"/>
+                            <constraint firstItem="Edo-c6-NdI" firstAttribute="bottom" secondItem="Zr2-Ce-NS3" secondAttribute="bottom" constant="10" id="Vdx-xj-itm"/>
+                            <constraint firstItem="Edo-c6-NdI" firstAttribute="trailing" secondItem="Zr2-Ce-NS3" secondAttribute="trailing" constant="10" id="ba3-M8-3I5"/>
+                            <constraint firstItem="X5p-4j-b4O" firstAttribute="leading" secondItem="Edo-c6-NdI" secondAttribute="leading" constant="10" id="bpn-xi-zHm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Xg1-NH-ypJ"/>
+                    <connections>
+                        <outlet property="tblPrintList" destination="Zr2-Ce-NS3" id="dzh-ba-BAD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3G-TU-bsp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

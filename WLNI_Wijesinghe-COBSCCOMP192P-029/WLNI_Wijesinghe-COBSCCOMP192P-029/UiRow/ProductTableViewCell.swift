@@ -6,9 +6,11 @@
 //
 
 import UIKit
-
+import Firebase
 class ProductTableViewCell: UITableViewCell {
-  
+    private let db = Database.database().reference();
+    var id = "";
+    @IBOutlet weak var lblCategory: UILabel!
     @IBOutlet weak var lblProductName: UILabel!
     @IBOutlet weak var lblProductDesc: UILabel!
     @IBOutlet weak var lblPrice: UILabel!
@@ -28,12 +30,29 @@ class ProductTableViewCell: UITableViewCell {
     }
     
     func setupView(pro:Product) {
-          self.lblProductName.text=pro.name
-          self.lblProductDesc.text=pro.description
-          self.lblPrice.text = pro.price
-          //self.imgProduct.image = pro.image
-          self.lblDiscount.text=pro.discount
+        self.lblProductName.text=pro.name
+        self.lblProductDesc.text=pro.description
+        self.lblPrice.text = pro.price
+        
+        var aaa = "https://firebasestorage.googleapis.com/v0/b/iosass-98c3a.appspot.com/o" + pro.image +
+        "?alt=media&token=90784910-d017-4a15-b164-af4f55e31a49";
+        
+        
+        let url = URL( string: aaa)
+        let data = try? Data(contentsOf: url!)
+        self.imgProduct.image = UIImage(data: data!)
+        
+        self.lblDiscount.text=pro.discount
+        self.lblCategory.text = pro.category
+        self.id = pro.id
+        pro.asSell != 0 ? self.switchSell.setOn(true, animated: true) : self.switchSell.setOn(false, animated: true);
+      
       }
 
+    @IBAction func asSellSwitchClick(_ sender: Any) {
+         
+        self.db.child("Product").child(id).child("sellAsItem").setValue(switchSell.isOn ? 1 : 0);
+      
+    }
     
 }

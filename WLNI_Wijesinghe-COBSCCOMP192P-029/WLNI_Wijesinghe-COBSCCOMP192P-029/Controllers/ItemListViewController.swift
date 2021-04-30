@@ -31,6 +31,7 @@ class ItemListViewController: UIViewController,UITableViewDelegate,UITableViewDa
     @IBAction func btnProductLoad(_ sender: Any) {
         lodaData()
     }
+    
     @objc func lodaData(){
          
          let group = DispatchGroup()
@@ -38,13 +39,10 @@ class ItemListViewController: UIViewController,UITableViewDelegate,UITableViewDa
                       if snapshot.exists() {
                          
                          let dataChange = snapshot.value as! [String:AnyObject]
-                       
-                         
-                       
+                        
                          group.wait()
                         self.pro.removeAll()
                          dataChange.forEach({ (key,val) in
-                           
                            
                             let objProduct = Product(
                                 id: key as! String,
@@ -82,7 +80,7 @@ class ItemListViewController: UIViewController,UITableViewDelegate,UITableViewDa
      
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "foodListItem", for: indexPath) as! ProductTableViewCell
-        
+      
             cell.setupView(pro: pro[indexPath.row])
         
             return cell

@@ -10,6 +10,13 @@
 		7C27CEFC941487A777C47CA5 /* Pods_WLNI_Wijesinghe_COBSCCOMP192P_029.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8146A24ACFE581C9B3DA8936 /* Pods_WLNI_Wijesinghe_COBSCCOMP192P_029.framework */; };
 		FA22BDAF2635D1680046939E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22BDAE2635D1680046939E /* Product.swift */; };
 		FA22BDB22635D25F0046939E /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22BDB12635D25F0046939E /* ProductViewController.swift */; };
+		FA2EC6D8263C2543004CF0D5 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EC6D6263C2543004CF0D5 /* OrderTableViewCell.swift */; };
+		FA2EC6D9263C2543004CF0D5 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2EC6D7263C2543004CF0D5 /* OrderTableViewCell.xib */; };
+		FA2EC6DC263C2576004CF0D5 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EC6DB263C2576004CF0D5 /* OrderViewController.swift */; };
+		FA2EC6DF263C283F004CF0D5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EC6DE263C283F004CF0D5 /* Order.swift */; };
+		FA2EC6E2263C5EDB004CF0D5 /* PrintDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EC6E1263C5EDB004CF0D5 /* PrintDataViewController.swift */; };
+		FA2EC6E6263C5F7E004CF0D5 /* PrintOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EC6E4263C5F7E004CF0D5 /* PrintOrderTableViewCell.swift */; };
+		FA2EC6E7263C5F7E004CF0D5 /* PrintOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2EC6E5263C5F7E004CF0D5 /* PrintOrderTableViewCell.xib */; };
 		FAC3D1E82633F48F000F8FC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D1E72633F48F000F8FC1 /* AppDelegate.swift */; };
 		FAC3D1EA2633F48F000F8FC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D1E92633F48F000F8FC1 /* SceneDelegate.swift */; };
 		FAC3D1EC2633F48F000F8FC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D1EB2633F48F000F8FC1 /* ViewController.swift */; };
@@ -33,6 +40,13 @@
 		8A12934B49DAE249EA823053 /* Pods-WLNI_Wijesinghe-COBSCCOMP192P-029.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLNI_Wijesinghe-COBSCCOMP192P-029.release.xcconfig"; path = "Target Support Files/Pods-WLNI_Wijesinghe-COBSCCOMP192P-029/Pods-WLNI_Wijesinghe-COBSCCOMP192P-029.release.xcconfig"; sourceTree = "<group>"; };
 		FA22BDAE2635D1680046939E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FA22BDB12635D25F0046939E /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		FA2EC6D6263C2543004CF0D5 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		FA2EC6D7263C2543004CF0D5 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		FA2EC6DB263C2576004CF0D5 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		FA2EC6DE263C283F004CF0D5 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		FA2EC6E1263C5EDB004CF0D5 /* PrintDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintDataViewController.swift; sourceTree = "<group>"; };
+		FA2EC6E4263C5F7E004CF0D5 /* PrintOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOrderTableViewCell.swift; sourceTree = "<group>"; };
+		FA2EC6E5263C5F7E004CF0D5 /* PrintOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrintOrderTableViewCell.xib; sourceTree = "<group>"; };
 		FAC3D1E42633F48F000F8FC1 /* WLNI_Wijesinghe-COBSCCOMP192P-029.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WLNI_Wijesinghe-COBSCCOMP192P-029.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC3D1E72633F48F000F8FC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC3D1E92633F48F000F8FC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +137,7 @@
 			children = (
 				FAC3D2012633FE63000F8FC1 /* Category.swift */,
 				FA22BDAE2635D1680046939E /* Product.swift */,
+				FA2EC6DE263C283F004CF0D5 /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +148,8 @@
 				FAC3D21626341EFF000F8FC1 /* CategoryViewController.swift */,
 				FA22BDB12635D25F0046939E /* ProductViewController.swift */,
 				FAE8D64F26374789004E2FAA /* ItemListViewController.swift */,
+				FA2EC6DB263C2576004CF0D5 /* OrderViewController.swift */,
+				FA2EC6E1263C5EDB004CF0D5 /* PrintDataViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -144,6 +161,10 @@
 				FAC3D21C26342191000F8FC1 /* CategoryTableViewCell.xib */,
 				FAE8D64526374123004E2FAA /* ProductTableViewCell.swift */,
 				FAE8D64626374123004E2FAA /* ProductTableViewCell.xib */,
+				FA2EC6D6263C2543004CF0D5 /* OrderTableViewCell.swift */,
+				FA2EC6D7263C2543004CF0D5 /* OrderTableViewCell.xib */,
+				FA2EC6E4263C5F7E004CF0D5 /* PrintOrderTableViewCell.swift */,
+				FA2EC6E5263C5F7E004CF0D5 /* PrintOrderTableViewCell.xib */,
 			);
 			path = UiRow;
 			sourceTree = "<group>";
@@ -207,11 +228,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2EC6E7263C5F7E004CF0D5 /* PrintOrderTableViewCell.xib in Resources */,
 				FAC3D1F72633F492000F8FC1 /* LaunchScreen.storyboard in Resources */,
 				FAE8D64826374123004E2FAA /* ProductTableViewCell.xib in Resources */,
 				FAC3D21E26342191000F8FC1 /* CategoryTableViewCell.xib in Resources */,
 				FAC3D1F42633F492000F8FC1 /* Assets.xcassets in Resources */,
 				FAC3D1EF2633F48F000F8FC1 /* Main.storyboard in Resources */,
+				FA2EC6D9263C2543004CF0D5 /* OrderTableViewCell.xib in Resources */,
 				FAC3D2062633FF5F000F8FC1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,10 +290,15 @@
 			files = (
 				FAC3D1EC2633F48F000F8FC1 /* ViewController.swift in Sources */,
 				FA22BDAF2635D1680046939E /* Product.swift in Sources */,
+				FA2EC6E2263C5EDB004CF0D5 /* PrintDataViewController.swift in Sources */,
+				FA2EC6DC263C2576004CF0D5 /* OrderViewController.swift in Sources */,
+				FA2EC6E6263C5F7E004CF0D5 /* PrintOrderTableViewCell.swift in Sources */,
 				FAC3D2022633FE63000F8FC1 /* Category.swift in Sources */,
 				FAC3D1E82633F48F000F8FC1 /* AppDelegate.swift in Sources */,
 				FAE8D65026374789004E2FAA /* ItemListViewController.swift in Sources */,
+				FA2EC6DF263C283F004CF0D5 /* Order.swift in Sources */,
 				FAE8D64726374123004E2FAA /* ProductTableViewCell.swift in Sources */,
+				FA2EC6D8263C2543004CF0D5 /* OrderTableViewCell.swift in Sources */,
 				FAC3D1F22633F48F000F8FC1 /* WLNI_Wijesinghe_COBSCCOMP192P_029.xcdatamodeld in Sources */,
 				FAC3D21D26342191000F8FC1 /* CategoryTableViewCell.swift in Sources */,
 				FA22BDB22635D25F0046939E /* ProductViewController.swift in Sources */,
