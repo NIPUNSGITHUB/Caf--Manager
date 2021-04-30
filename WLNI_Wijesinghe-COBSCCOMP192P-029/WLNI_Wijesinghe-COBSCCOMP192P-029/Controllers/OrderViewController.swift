@@ -45,15 +45,15 @@ class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                          dataChange.forEach({ (key,val) in
 
                             let objOrder = Order(
-                                id: key as! String,
-                                customerName:val["customerName"] as! String,
-                                orderedLocation:val["orderedLocation"] as! String,
-                                address:val["address"] as! String,
-                                contactNo:val["contactNo"] as! String,
-                                itemJson:val["itemJson"] as! String,
-                                total:val["total"] as! String,
-                                orderCreatedAt:val["orderCreatedAt"] as! String,
-                                status:val["status"] as! Int
+                                id: key as? String,
+                                customerName:val["customerName"] as? String,
+                                orderedLocation:val["orderedLocation"] as? String,
+                                address:val["address"] as? String,
+                                contactNo:val["contactNo"] as? String,
+                                itemJson:val["itemJson"] as? String,
+                                total:val["total"] as? String,
+                                orderCreatedAt:val["orderCreatedAt"] as? String,
+                                status:val["status"] as? Int
                             );
                              self.orderArr.append(objOrder)
 

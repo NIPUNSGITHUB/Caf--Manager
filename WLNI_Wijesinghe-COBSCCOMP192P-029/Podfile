@@ -10,5 +10,6 @@ target 'WLNI_Wijesinghe-COBSCCOMP192P-029' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'DropDown'
+  pod 'Firebase/Auth'
 
 end

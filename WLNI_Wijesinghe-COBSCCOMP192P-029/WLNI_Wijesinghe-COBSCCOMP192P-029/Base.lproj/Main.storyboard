@@ -9,15 +9,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WLNI_Wijesinghe_COBSCCOMP192P_029" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignUpViewController" customModule="WLNI_Wijesinghe_COBSCCOMP192P_029" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Je6-yE-cXz">
+                                <rect key="frame" x="30" y="200" width="315" height="83"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ac9-bk-iS6">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dYs-zQ-Fda">
+                                        <rect key="frame" x="0.0" y="49" width="315" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z67-VX-Bqj">
+                                <rect key="frame" x="40" y="291" width="295" height="30"/>
+                                <state key="normal" title="Signup"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z67-VX-Bqj" secondAttribute="bottom" constant="346" id="5KH-Mq-mTA"/>
+                            <constraint firstItem="Je6-yE-cXz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6Gt-WD-i15"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Je6-yE-cXz" secondAttribute="trailing" constant="30" id="Lgj-1S-wI4"/>
+                            <constraint firstItem="Je6-yE-cXz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Lm9-Zv-88K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z67-VX-Bqj" secondAttribute="trailing" constant="40" id="OrB-n4-GHo"/>
+                            <constraint firstItem="z67-VX-Bqj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="yZV-KE-mRv"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -27,7 +56,8 @@
         <!--Tab Bar Controller-->
         <scene sceneID="kty-Gs-Mlk">
             <objects>
-                <tabBarController id="f3I-1j-ifL" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="f3I-1j-ifL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WAX-l2-T0H"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zdj-Oa-98C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -71,10 +101,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="XNM-6Q-jDF"/>
+                    <navigationItem key="navigationItem" id="gup-hr-LmB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIR-G3-K21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="2342"/>
+            <point key="canvasLocation" x="-1039" y="53"/>
         </scene>
         <!--Order-->
         <scene sceneID="dFR-C1-viX">
@@ -156,7 +187,7 @@
         <!--Item List View Controller-->
         <scene sceneID="60T-A6-sHS">
             <objects>
-                <viewController id="n05-0o-tK0" customClass="ItemListViewController" customModule="WLNI_Wijesinghe_COBSCCOMP192P_029" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainScreen" id="n05-0o-tK0" customClass="ItemListViewController" customModule="WLNI_Wijesinghe_COBSCCOMP192P_029" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sIq-qq-ne9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
