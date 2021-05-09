@@ -9,20 +9,27 @@ import UIKit
 import Firebase
 class ItemListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
    
+    @IBOutlet weak var preview: UIButton!
+    @IBOutlet weak var btnCategoryUi: UIButton!
+    @IBOutlet weak var btnMenuUi: UIButton!
     private let db = Database.database().reference()
     @IBOutlet weak var tblProductList: UITableView!
-   
+    @IBOutlet weak var activityLoader: UIActivityIndicatorView!
+    
+    @IBOutlet weak var loading: UIStackView!
     var ct:[Category] = []
     var pro:[Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tblProductList.tableFooterView = UIView(frame: .zero)
         tblProductList.delegate = self
         tblProductList.dataSource = self
-        
         let nib = UINib(nibName: "ProductTableViewCell", bundle: nil)
         tblProductList.register(nib, forCellReuseIdentifier: "foodListItem")
+        preview.layer.cornerRadius = 10.0;
+        btnCategoryUi.layer.cornerRadius = 10.0;
+        btnMenuUi.layer.cornerRadius = 10.0;
         lodaData()
         
         // Do any additional setup after loading the view.
@@ -33,7 +40,7 @@ class ItemListViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     @objc func lodaData(){
-         
+        spinner();
          let group = DispatchGroup()
                  self.db.child("Product").getData { (error, snapshot) in
                       if snapshot.exists() {
@@ -59,10 +66,10 @@ class ItemListViewController: UIViewController,UITableViewDelegate,UITableViewDa
                              self.pro.append(objProduct)
                            
                          })
-                         
                        
                          
                          group.notify(queue: .main) {
+                            self.spinner()
                                  // do something here when loop finished
                             self.pro.sorted() { $0.name > $1.name }
                             self.tblProductList.reloadData()
@@ -72,6 +79,36 @@ class ItemListViewController: UIViewController,UITableViewDelegate,UITableViewDa
                  }
      }
     
+    func spinner() {
+        activityLoader.color = UIColor.systemYellow;
+        if tblProductList.isHidden {
+            activityLoader.stopAnimating()
+            loading.isHidden = true;
+            tblProductList.isHidden = false;
+        }
+        else
+        {
+            loading.isHidden = false;
+            activityLoader.startAnimating()
+            tblProductList.isHidden = true;
+        }
+
+    }
+    
+    @IBAction func btnLogout(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+           do {
+             try firebaseAuth.signOut()
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let vc = UIViewController()
+                vc.modalPresentationStyle = .fullScreen
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "signinPage") as! SigninViewController
+                self.present(nextViewController, animated:true, completion:nil)
+           } catch let signOutError as NSError {
+             print ("Error signing out: %@", signOutError)
+           }
+         
+    }
     
      
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,5 +123,6 @@ class ItemListViewController: UIViewController,UITableViewDelegate,UITableViewDa
             return cell
         
      }
+   
      
 }

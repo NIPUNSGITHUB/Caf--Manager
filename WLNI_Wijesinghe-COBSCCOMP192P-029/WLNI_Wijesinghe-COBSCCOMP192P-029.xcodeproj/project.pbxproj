@@ -18,6 +18,9 @@
 		FA2EC6E6263C5F7E004CF0D5 /* PrintOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EC6E4263C5F7E004CF0D5 /* PrintOrderTableViewCell.swift */; };
 		FA2EC6E7263C5F7E004CF0D5 /* PrintOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2EC6E5263C5F7E004CF0D5 /* PrintOrderTableViewCell.xib */; };
 		FA2EC6EA263C6678004CF0D5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EC6E9263C6678004CF0D5 /* SignUpViewController.swift */; };
+		FAAA04FD2646B35F0089631A /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA04FC2646B35F0089631A /* SigninViewController.swift */; };
+		FAAA05042646E55C0089631A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA05032646E55C0089631A /* HomeViewController.swift */; };
+		FAAA05072646E8660089631A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA05062646E8660089631A /* ForgotPasswordViewController.swift */; };
 		FAC3D1E82633F48F000F8FC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D1E72633F48F000F8FC1 /* AppDelegate.swift */; };
 		FAC3D1EA2633F48F000F8FC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D1E92633F48F000F8FC1 /* SceneDelegate.swift */; };
 		FAC3D1EC2633F48F000F8FC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3D1EB2633F48F000F8FC1 /* ViewController.swift */; };
@@ -49,6 +52,9 @@
 		FA2EC6E4263C5F7E004CF0D5 /* PrintOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOrderTableViewCell.swift; sourceTree = "<group>"; };
 		FA2EC6E5263C5F7E004CF0D5 /* PrintOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrintOrderTableViewCell.xib; sourceTree = "<group>"; };
 		FA2EC6E9263C6678004CF0D5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FAAA04FC2646B35F0089631A /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		FAAA05032646E55C0089631A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FAAA05062646E8660089631A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		FAC3D1E42633F48F000F8FC1 /* WLNI_Wijesinghe-COBSCCOMP192P-029.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WLNI_Wijesinghe-COBSCCOMP192P-029.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC3D1E72633F48F000F8FC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC3D1E92633F48F000F8FC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +159,9 @@
 				FA2EC6DB263C2576004CF0D5 /* OrderViewController.swift */,
 				FA2EC6E1263C5EDB004CF0D5 /* PrintDataViewController.swift */,
 				FA2EC6E9263C6678004CF0D5 /* SignUpViewController.swift */,
+				FAAA04FC2646B35F0089631A /* SigninViewController.swift */,
+				FAAA05032646E55C0089631A /* HomeViewController.swift */,
+				FAAA05062646E8660089631A /* ForgotPasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -293,18 +302,21 @@
 			files = (
 				FAC3D1EC2633F48F000F8FC1 /* ViewController.swift in Sources */,
 				FA22BDAF2635D1680046939E /* Product.swift in Sources */,
+				FAAA05042646E55C0089631A /* HomeViewController.swift in Sources */,
 				FA2EC6E2263C5EDB004CF0D5 /* PrintDataViewController.swift in Sources */,
 				FA2EC6DC263C2576004CF0D5 /* OrderViewController.swift in Sources */,
 				FA2EC6E6263C5F7E004CF0D5 /* PrintOrderTableViewCell.swift in Sources */,
 				FA2EC6EA263C6678004CF0D5 /* SignUpViewController.swift in Sources */,
 				FAC3D2022633FE63000F8FC1 /* Category.swift in Sources */,
 				FAC3D1E82633F48F000F8FC1 /* AppDelegate.swift in Sources */,
+				FAAA04FD2646B35F0089631A /* SigninViewController.swift in Sources */,
 				FAE8D65026374789004E2FAA /* ItemListViewController.swift in Sources */,
 				FA2EC6DF263C283F004CF0D5 /* Order.swift in Sources */,
 				FAE8D64726374123004E2FAA /* ProductTableViewCell.swift in Sources */,
 				FA2EC6D8263C2543004CF0D5 /* OrderTableViewCell.swift in Sources */,
 				FAC3D1F22633F48F000F8FC1 /* WLNI_Wijesinghe_COBSCCOMP192P_029.xcdatamodeld in Sources */,
 				FAC3D21D26342191000F8FC1 /* CategoryTableViewCell.swift in Sources */,
+				FAAA05072646E8660089631A /* ForgotPasswordViewController.swift in Sources */,
 				FA22BDB22635D25F0046939E /* ProductViewController.swift in Sources */,
 				FAC3D21726341EFF000F8FC1 /* CategoryViewController.swift in Sources */,
 				FAC3D1EA2633F48F000F8FC1 /* SceneDelegate.swift in Sources */,

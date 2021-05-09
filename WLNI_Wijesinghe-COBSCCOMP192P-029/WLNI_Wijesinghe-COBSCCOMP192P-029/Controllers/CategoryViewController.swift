@@ -14,6 +14,7 @@ class CategoryViewController: UIViewController ,UITableViewDelegate,UITableViewD
     private let db = Database.database().reference()
     var ct:[Category] = [
     ]
+    @IBOutlet weak var btnAddUi: UIButton!
     @IBOutlet weak var txt_nmw: UITextField!
     @IBOutlet weak var tbl_category:UITableView!
     
@@ -21,10 +22,12 @@ class CategoryViewController: UIViewController ,UITableViewDelegate,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tbl_category.tableFooterView = UIView(frame: .zero)
         tbl_category.delegate = self
         tbl_category.dataSource = self
         let nib=UINib(nibName: "CategoryTableViewCell", bundle: nil)
                 tbl_category.register(nib, forCellReuseIdentifier: "CategoryTableViewCell")
+        btnAddUi.layer.cornerRadius = 10.0;
         lodaData()
         // Do any additional setup after loading the view.
     }

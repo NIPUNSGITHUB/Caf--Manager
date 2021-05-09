@@ -16,16 +16,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="378" height="73"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRP-l4-oZo">
-                        <rect key="frame" x="152" y="26" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRP-l4-oZo">
+                        <rect key="frame" x="10" y="26" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="QRP-l4-oZo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="JPs-p7-Uiz"/>
                     <constraint firstItem="QRP-l4-oZo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="Sbb-tz-JC9"/>
-                    <constraint firstItem="QRP-l4-oZo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YWP-te-kbs"/>
                     <constraint firstAttribute="bottom" secondItem="QRP-l4-oZo" secondAttribute="bottom" constant="26" id="r5S-Ki-jLM"/>
                 </constraints>
             </tableViewCellContentView>

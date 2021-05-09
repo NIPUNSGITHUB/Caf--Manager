@@ -33,19 +33,29 @@ class OrderTableViewCell: UITableViewCell {
         self.lblCustName.text = ord.customerName;
         self.lblOrderId.text = ord.id;
         if ord.status == 1 {
-            self.btnStatus.isHidden = false
-            self.btnRejectOrder.isHidden = false;
-            self.btnAcceptOrder.isHidden = false;
-            self.btnAwaitingOrder.isHidden = true
+            //Accept
+            self.btnStatus.isHidden = true
+            self.btnRejectOrder.isHidden = true;
+            self.btnAcceptOrder.isHidden = true;
+            self.btnAwaitingOrder.isHidden = false
 
+        }
+        else if ord.status == 0
+        {
+            //Reject
+            self.btnStatus.isHidden = true
+            self.btnAwaitingOrder.isHidden = true
+            self.btnRejectOrder.isHidden = false;
+            self.btnRejectOrder.setTitle("CANCEL", for: UIControl.State.normal)
+            self.btnAcceptOrder.isHidden = true;
         }
         else
         {
-            
-            self.btnStatus.isHidden = true
-            self.btnAwaitingOrder.isHidden = false
-            self.btnRejectOrder.isHidden = true;
-            self.btnAcceptOrder.isHidden = true;
+            //
+            self.btnStatus.isHidden = false
+            self.btnAwaitingOrder.isHidden = true
+            self.btnRejectOrder.isHidden = false;
+            self.btnAcceptOrder.isHidden = false;
         }
        
     }
@@ -54,11 +64,11 @@ class OrderTableViewCell: UITableViewCell {
         let group = DispatchGroup()
         self.db.child("Orders").child(order.id).child("status").setValue(0);
         group.wait()
-    
+
         group.notify(queue: .main) {
-            self.orderViewController?.lodaData();
-           
+            self.orderViewController?.reset(id:self.order.id,status: 0);
         }
+        
         
     }
     
@@ -69,7 +79,7 @@ class OrderTableViewCell: UITableViewCell {
         group.wait()
     
         group.notify(queue: .main) {
-            self.orderViewController?.lodaData();
+            self.orderViewController?.reset(id:self.order.id,status: 1);
         }
         
     }
@@ -77,9 +87,6 @@ class OrderTableViewCell: UITableViewCell {
     @IBAction func btnInfo(_ sender: Any) {
        orderViewController?.showSimpleActionSheet(ord:order)
     }
-    
-    
-    //
     
    
 }

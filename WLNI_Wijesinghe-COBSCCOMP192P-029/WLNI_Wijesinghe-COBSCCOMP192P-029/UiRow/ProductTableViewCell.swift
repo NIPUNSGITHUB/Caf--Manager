@@ -10,6 +10,7 @@ import Firebase
 class ProductTableViewCell: UITableViewCell {
     private let db = Database.database().reference();
     var id = "";
+    @IBOutlet weak var uiDiscount: UIView!
     @IBOutlet weak var lblCategory: UILabel!
     @IBOutlet weak var lblProductName: UILabel!
     @IBOutlet weak var lblProductDesc: UILabel!
@@ -20,6 +21,12 @@ class ProductTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        uiDiscount.layer.cornerRadius = 10.0;
+        imgProduct.layer.borderWidth = 1
+        imgProduct.layer.masksToBounds = false
+        imgProduct.layer.borderColor = UIColor.black.cgColor
+        imgProduct.layer.cornerRadius = imgProduct.frame.height/2
+        imgProduct.clipsToBounds = true
         // Initialization code
     }
 
@@ -41,8 +48,14 @@ class ProductTableViewCell: UITableViewCell {
         let url = URL( string: aaa)
         let data = try? Data(contentsOf: url!)
         self.imgProduct.image = UIImage(data: data!)
+        if pro.discount == "0" {
+            self.uiDiscount.isHidden = true
+        }
+        else
+        {
+            self.lblDiscount.text=pro.discount
+        }
         
-        self.lblDiscount.text=pro.discount
         self.lblCategory.text = pro.category
         self.id = pro.id
         pro.asSell != 0 ? self.switchSell.setOn(true, animated: true) : self.switchSell.setOn(false, animated: true);
@@ -56,3 +69,4 @@ class ProductTableViewCell: UITableViewCell {
     }
     
 }
+

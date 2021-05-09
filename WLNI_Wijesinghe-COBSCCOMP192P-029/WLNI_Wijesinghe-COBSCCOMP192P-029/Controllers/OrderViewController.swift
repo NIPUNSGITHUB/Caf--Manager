@@ -18,6 +18,7 @@ class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         super.viewDidLoad()
         tblOrderList.delegate = self
         tblOrderList.dataSource = self
+        tblOrderList.tableFooterView = UIView(frame: .zero)
         let nib = UINib(nibName: "OrderTableViewCell", bundle: nil)
         tblOrderList.register(nib, forCellReuseIdentifier: "orderListItem")
         lodaData();
@@ -28,6 +29,20 @@ class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     @IBAction func resetButton(_ sender: Any) {
         self.order.resetOrders();
         lodaData();
+    }
+    
+    func reset(id:String,status:Int) {
+        var index = self.orderArr.firstIndex(where: {$0.id == id})
+        if status == 1 {
+            self.orderArr[index!].status = 1
+            self.tblOrderList.reloadData()
+        }
+        else
+        {
+            self.orderArr[index!].status = 0
+            self.tblOrderList.reloadData()
+        }
+      
     }
     
     
@@ -43,7 +58,8 @@ class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                         group.wait()
                        
                          dataChange.forEach({ (key,val) in
-
+//                            print("------")
+//                            print(val)
                             let objOrder = Order(
                                 id: key as? String,
                                 customerName:val["customerName"] as? String,
@@ -86,17 +102,21 @@ class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
 
     func showSimpleActionSheet(ord:Order) {
+        let JSON = ord.itemJson;
+        
+        print(JSON)
         let alert = UIAlertController(title: "Order Details", message: "", preferredStyle: .actionSheet)
        
         alert.addAction(UIAlertAction(title:ord.itemJson, style: .default ))
-        
-      
- 
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 
             self.present(alert, animated: true, completion: {
                 print("completion block")
             })
-        }
+        
+       
 
+    }
+    
+   
 }

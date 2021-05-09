@@ -37,47 +37,47 @@ struct  Order {
     let orderArray = [
         [
             "id":"2CDAED39-D6F0",
-            "customerName":"H. W Perera",
+            "customerName":"A. C Perera",
             "orderedLocation":"6.917939811486741, 79.8860296817547",
             "address":"100/2 Borella North, Colombo",
-            "contactNo":"07127372654",
+            "contactNo":"07027372654",
             "itemJson":"[{\"itemId\": \"01658721-73DF-4FF4-BD11-AA4B763BAD84\",\"name\":\"Product1\",\"qty\":\"3\",\"unitPrice\":\"100.00\"}, {\"itemId\": \"D2CC8EF6-90DF-4CB8-8792-930EDC797CA1\",\"name\":\"Product1\",\"qty\":\"2\",\"unitPrice\":\"50.00\"} ]",
             "total":"200",
             "orderCreatedAt":"2021-04-31",
-            "status":0
+            "status":2
         ],
         [
             "id":"2F02D7E5-28C4",
-            "customerName":"H. W Perera",
+            "customerName":"B. W Perera",
             "orderedLocation":"6.917939811486741, 79.8860296817547",
             "address":"100/2 Borella North, Colombo",
-            "contactNo":"07127372654",
+            "contactNo":"07827372654",
             "itemJson":"[{\"itemId\": \"01658721-73DF-4FF4-BD11-AA4B763BAD84\",\"name\":\"Product1\",\"qty\":\"3\",\"unitPrice\":\"100.00\"}, {\"itemId\": \"D2CC8EF6-90DF-4CB8-8792-930EDC797CA1\",\"name\":\"Product1\",\"qty\":\"2\",\"unitPrice\":\"50.00\"} ]",
             "total":"200",
             "orderCreatedAt":"2021-04-31",
-            "status":1
+            "status":2
         ],
         [
             "id":"2F48958D-F27C",
-            "customerName":"H. W Perera",
+            "customerName":"C. H Perera",
             "orderedLocation":"6.917939811486741, 79.8860296817547",
             "address":"100/2 Borella North, Colombo",
-            "contactNo":"07127372654",
+            "contactNo":"07127372653",
             "itemJson":"[{\"itemId\": \"01658721-73DF-4FF4-BD11-AA4B763BAD84\",\"name\":\"Product1\",\"qty\":\"3\",\"unitPrice\":\"100.00\"}, {\"itemId\": \"D2CC8EF6-90DF-4CB8-8792-930EDC797CA1\",\"name\":\"Product1\",\"qty\":\"2\",\"unitPrice\":\"50.00\"} ]",
             "total":"200",
             "orderCreatedAt":"2021-04-31",
-            "status":1
+            "status":2
         ],
         [
             "id":"4543744D-F95E",
-            "customerName":"H. W Perera",
+            "customerName":"D. G Perera",
             "orderedLocation":"6.917939811486741, 79.8860296817547",
             "address":"100/2 Borella North, Colombo",
-            "contactNo":"07127372654",
+            "contactNo":"07227372654",
             "itemJson":"[{\"itemId\": \"01658721-73DF-4FF4-BD11-AA4B763BAD84\",\"name\":\"Product1\",\"qty\":\"3\",\"unitPrice\":\"100.00\"}, {\"itemId\": \"D2CC8EF6-90DF-4CB8-8792-930EDC797CA1\",\"name\":\"Product1\",\"qty\":\"2\",\"unitPrice\":\"50.00\"} ]",
             "total":"200",
             "orderCreatedAt":"2021-04-31",
-            "status":1
+            "status":2
         ]
         
     ];
